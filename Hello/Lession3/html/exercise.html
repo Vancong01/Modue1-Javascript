@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Bài 1
+    var diemtoan = parseInt(prompt("nhập điểm toán" , ''));
+    var diemly = parseInt(prompt("nhập điểm lý", ''));
+    var diemhoa = parseInt(prompt("nhập điểm hóa",''));
+    var diemtb = (diemtoan+ diemly+ diemhoa)/3;
+
+    document.write("Điểm trung bình là: " + diemtb);
+    Bài 2
+    var doC = parseInt(prompt("Bạn hãy nhập độ C để chuyển sang độ F",''));
+    var doF = (9*doC/5 +32);
+    document.write(doC +" độ C = "+doF+ " độ F.")
+    Bài 3
+    const PI = 3.14
+    var r = parseInt(prompt("Nhập bán kính hình tròn: ", ''));
+    var dientich = PI*r*r;
+    var chuvi = 2*PI*r;
+    document.write("Diện tích của hình tròn có bán kính "+ r+" là: "+ dientich);
+    document.write("<br>")
+    document.write("Chu vi của hình tròn là: "+chuvi);
+</script>
+</body>
+</html>

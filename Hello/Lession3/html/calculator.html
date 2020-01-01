@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<form>
+    <label>Calculater</label>
+    <br>
+    <input type="number" name="text1" id="text1">
+    <input type="number" name="text2" id="text2">
+    <br>
+    <button type="button" onclick="Add();">Add</button>
+    <button type="button" onclick="Sub();">Sub</button>
+    <button type="button" onclick="Mul();">Mul</button>
+    <button type="button" onclick="Div();">Div</button>
+    <br>
+    <input type="text" id="result">
+</form>
+<script>
+
+    function Add() {
+        var text1= parseInt(document.getElementById("text1").value);
+        var text2= parseInt(document.getElementById("text2").value);
+        var kq = text1 + text2;
+        alert(kq)
+    }
+    function Sub() {
+        var text1= parseInt(document.getElementById("text1").value);
+        var text2= parseInt(document.getElementById("text2").value);
+        var kq = text1 - text2;
+        alert(kq);
+    }
+    function Mul() {
+        var text1= parseInt(document.getElementById("text1").value);
+        var text2= parseInt(document.getElementById("text2").value);
+        var kq = text1 * text2;
+        alert(kq);
+    }
+    function Div() {
+        var text1= parseInt(document.getElementById("text1").value);
+        var text2= parseInt(document.getElementById("text2").value);
+        var kq = text1 / text2;
+        alert(kq);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form id="form" name="form" method="post">
+    <label>Amount</label>
+    <input type="text" name="text" id="Amount" />
+    <label>From Currency</label>
+    <select name="select" id="FromCurrency">
+        <option value="USD">USD</option>
+        <option value="VietNam">Việt Nam</option>
+        <option value="Aur">Aur</option>
+    </select>
+    <label>To Currency</label>
+    <select name="to currency" id="ToCurrency">
+        <option value="VietNam">Việt Nam</option>
+        <option value="USD">USD</option>
+        <option value="Aur">Aur</option>
+    </select>
+    <input type="button" name="convert" value="Gửi" onclick="doitiente();" />
+</form>
+<script>
+    function doitiente() {
+        var amount = parseInt(document.getElementById("Amount").value);
+        var from = document.getElementById("FromCurrency").value;
+        var to = document.getElementById("ToCurrency").value;
+        var result;
+        if(from =="VietNam" && to =="USD"){
+            result = amount *(1/23000);
+        }
+        if(from =="VietNam" && to =="Aur")
+        {
+            result = amount *(1/26745);
+        }
+        if(from =="USD" && to =="VietNam")
+        {
+            result = amount *23000;
+        }
+        if(from =="USD" && to =="Aur")
+        {
+            result = amount *(23000/26745);
+        }
+        if(from =="Aur" && to =="VietNam")
+        {
+            result = amount *26745;
+        }
+        if(from =="Aur" && to =="USD")
+        {
+            result = amount *(26745/23000);
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
